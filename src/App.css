@@ -1,0 +1,1019 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+.img {
+  height: 400px !important;
+
+}
+
+/* ------------------------Enquire Page-------------- */
+.Details {
+  display: flex;
+  background: gray;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 500px;
+  color: black;
+}
+
+.Entry {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Entry h3 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+  transform: scale(1.2);
+}
+
+
+.Entry p {
+  font-size: 15px;
+  margin: 0 auto;
+  max-width: 600px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.Details2 h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.inquiry-form {
+  display: flex;
+  background-color: #f9e10b;
+  color: black;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.inquiry-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.inquiry-input,
+.inquiry-textarea {
+  padding: 10px;
+  font-weight: bold;
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.inquiry-button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inquiry-button:hover {
+  background-color: grey;
+  transform: scale(1.2);
+}
+
+/* --------------------Common Code for All Links Pages--------------------*/
+.pagesection h2 {
+  background-color: #f9e10b;
+  display: flex;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* -------------------------------Video Page-------------------- */
+
+.video {
+  box-sizing: border-box;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 15px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.vido {
+  display: flex;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 50px 0;
+
+  @media screen and (max-width: 768px) {
+    min-height: 700px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    min-height: 800px;
+  }
+}
+
+.vido h1 {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.video-container iframe {
+  width: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .video-container iframe {
+    height: 150px;
+
+  }
+}
+
+/* ----------------Event-Page-------------------- */
+
+.EventHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+
+}
+
+.SlidMain {
+  justify-content: center;
+  align-items: center;
+}
+
+.about-slider-container {
+  display: flex;
+  justify-content: center;
+  /* padding: 30px; */
+}
+
+@media (max-width: 767px) {
+  .EventSlid {
+    width: 100%;
+    height: auto;
+  }
+
+  .AboutSlideItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .AboutSlideItem img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    display: none;
+  }
+}
+
+
+
+/* ----------------Product page------------------- */
+.Product {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.ProductMain {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+/* -------------------Featured Page---------------------------- */
+.Featuredmain {
+  background-color: white;
+  text-align: center;
+}
+
+.Featured {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.FeaturedCard {
+  height: 460px;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.Featuredheader {
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 20px;
+
+}
+
+.featured-container {
+  padding: 20px;
+}
+
+.Featured-mobile {
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .Featuredheader {
+    font-size: 24px;
+  }
+
+  .FeaturedCard {
+    width: 80%;
+  }
+}
+
+.UserCard {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .UserCard {
+    width: 70%;
+  }
+}
+
+/* -----------------------------Mission Page------------------------------ */
+.Mission {
+
+  color: #f9e10b;
+}
+
+.counter {
+  padding: 5rem 3rem 5rem 3rem;
+  background-image: url(https://www.city.ac.uk/__data/assets/image/0007/674710/varieties/breakpoint-max.jpg);
+}
+
+.counter h1 {
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.counter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+
+}
+
+.counter-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid white;
+  color: white;
+}
+
+.counter-column:last-child {
+  border-right: none;
+}
+
+.counter-column .number {
+  font-weight: 600;
+  font-size: 50px;
+  color: white;
+}
+
+.counter-column span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+  padding-left: 15px;
+}
+
+.counter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.counter-column {
+  text-align: center;
+}
+
+.number {
+  font-size: 48px;
+}
+
+@media screen and (max-width: 767px) {
+  .counter-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-column {
+    margin-bottom: 20px;
+
+  }
+
+
+}
+
+/*-------------------------------Media Page------------------------- */
+.Mediaheading {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.MediaMain {
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  padding: 50px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.News {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 10px;
+  gap: 25px;
+  transform: scale(1.2);
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+
+    transform: scale(1.1);
+  }
+
+}
+
+.high {
+  padding: 0px;
+}
+
+.pagesection {
+  padding: 20px;
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.col {
+  flex: 0 0 50%;
+  padding: 0 10px;
+}
+
+/* --------------------------------Application Form Page------------------------ */
+.appmain {
+  margin: 0 auto;
+  display: center;
+}
+
+.appmain button {
+  background-color: black;
+  color: white;
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.appmain button:hover {
+  background-color: #f1de12;
+  color: black;
+  transform: scale(1.2);
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.appheader {
+  padding: 20px;
+
+}
+
+.call {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  flex: 0 0 100%;
+  padding: 0 15px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.appli {
+  background-color: #f1de12;
+  display: flex;
+  padding: 23px;
+  color: black;
+  border: 1px solid yellow;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* ------------------- Trusted voice page---------------------- */
+.trusted H2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+}
+
+.educ h5 {
+  background-color: #f9e10b;
+  display: flex;
+  padding: 23px;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* -------------------Career Page------------------------ */
+.hire h2 {
+  background-color: #f9e10b;
+  display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hire h4 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hire h6 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.appon h2 {
+  position: relative;
+  padding: 50px 0 40px;
+  background-color: #f7df2a;
+  margin: 0 0 40px;
+  background-position: 40% 0;
+  color: #222222;
+  background-size: auto;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ---------------Conatct Page------------------------ */
+.office h4 {
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.office h5 {
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.labl {
+  width: 400px;
+  padding-left: 30px;
+  border-radius: 4px;
+}
+
+.labl button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.labl button:hover {
+  background-color: #f9e10b;
+  color: black;
+  transform: scale(1.1);
+}
+
+.labl-container label {
+  display: block;
+  background-color: yellow;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.labl- input,
+.labl-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.labl-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container button[type="submit"] {
+  width: 100%;
+}
+
+.abou h1 {
+  background-color: #f9e10b;
+  display: flex;
+  padding: 23px;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* -----------------Blog page------------------------- */
+.fresh h2{
+  background-color: #f9e10b;
+  display: flex;
+  padding: 23px ;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}  
+.freshMain img{
+  max-width: 500px;
+}
+@media screen and (max-width: 767px) {
+  .fresh{
+    justify-content: center;
+    align-items: center;
+  }
+  .freshMain img {
+    display: flex;
+    max-width: 200px;
+    height: auto ;
+  }
+}
+
+
+/* --------------------------------Contact Page------------ */
+.officeMain {
+  display: flex;
+}
+
+.office {
+  background-color: rgba(42, 43, 53, 0.9);
+  color: white;
+  width: 510px;
+  height: 400px;
+  justify-content: center;
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.office1 {
+  background-color: rgba(42, 43, 53, 0.9);
+  color: white;
+  width: 100%;
+  height: 120px;
+  justify-content: center;
+  padding-top: 30px; 
+  padding-left: 20px;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .officeMain {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+  .office{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+ .ContactImg{
+  display: flex;
+ }
+   
+  .office1{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+  }
+}
+
+/* ------------------------Payment Page--------------------- */  
+
+.Paymentmain {
+  display: flex;
+}
+
+.PaymentBtn {
+  background-color: #00c1cf;
+  color: white;
+  height: 52px;
+  border-radius: 8px;
+}
+
+.PaymentBtn:hover {
+  background-color: #1e8188;
+  transform: scale(1.2);
+}
+
+.PaymentCard {
+  background-color: rgba(42, 43, 53, 0.9);
+  color: white;
+  width: 400px;
+  height: 230px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.PaymentCard button {
+  background-color: #f9e10b;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.PaymentCard button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .Paymentmain {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .PaymentCard {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --------------------------------Navbar ------------------------- */
+
+.navbar {
+  background-color: whitesmoke;
+  height: 70px;
+  /* color: black;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  color: black;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Direct {
+  color: black;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.NavBtn {
+  border-radius: 2em;
+  background-color: #f9e10b;
+  color: black;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+  margin-left: 23px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px #f9e10b;
+  z-index: 999;
+  box-shadow: 0 4px 8px 0 #f9e10b;
+}
+
+.dropdown-item {
+  margin-bottom: 10px;
+
+}
+
+.dropdown-link {
+  display: #f9e10b;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    z-index: 999;
+    color: white;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding-top: 10px;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .nav-link {
+    color: white;
+    
+  }
+
+  .dropdown-menu {
+    position: static;
+    top: auto;
+    left: auto;
+    /* transform: none;  */
+    box-shadow: none;
+    padding: 0;
+    background-color:#f9e10b ;
+    color: rgb(48, 23, 23);
+
+  }
+  .dropdown-link {
+    display: white;
+    color: white;
+  }
+  
+}
+
+
+/* ----------------AppSlide (HeroSection)  Page-------------------------- */
+
+@media (max-width: 767px) {
+  .Slid {
+    width: 100%;
+    height: auto;
+  }
+
+  .AppSlideItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .AppSlideItem img {
+    width: auto;
+    height: auto;
+    transition: 0.3s;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    display: none;
+  }
+}
+
+/* -------------------------------Register page------------------------------------- */
+.cont1 {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.cont1 button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cont1 button:hover {
+  background-color: #f9e10b;
+  color: black;
+}
+
+/* ---------------Gallery Page---------------------------- */
+
+@media (max-width: 767px) {
+  .GalleryMain {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .GalleryMain iframe {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* ----------------------Mock Page---------------------- */
+@media screen and (max-width: 767px) {
+  
+  .MockMain img {
+    display: flex;
+    max-width: 200px;
+    height: auto ;
+  }
+}
