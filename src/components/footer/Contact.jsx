@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Alert from 'react-bootstrap/Alert';
 import Facebook2 from '../../images/Facebook1.png';
 import Youtube2 from '../../images/Youtube1.png';
 import LinkedIn2 from '../../images/LinkedIn.png';
@@ -6,27 +7,44 @@ import Insta2 from '../../images/Insta1.png';
 import Address1 from '../../images/Address.png';
 import Phone2 from '../../images/Phone1.png';
 import Mail1 from '../../images/Mail.png';
+
 const Contact = () => {
+  const [show, setShow] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const sendContact = async (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log(`Name: ${name}`);
-    console.log(`Phobe: ${phone}`);
-    console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
-    // Reset form fields
-    setName('');
-    setPhone(``);
-    setEmail('');
-    setMessage('');
+    const res = await fetch("/request", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name, phone, email, message
+      })
+    });
+
+    const data = await res.json();
+    console.log(data);
+
+    if (data.status === 401 || !data) {
+      console.log("error")
+    } else {
+      setShow(true);
+      // setEmail("")
+      console.log("Email sent")
+    }
   };
   return (
     <>
+      {
+        show ? <Alert variant="primary" onClose={() => setShow(false)} dismissible>
+          Your Request is Succesfully Send
+        </Alert> : ""
+      }
       <div className='pagesection'>
         <div className='container' >
           <div className='row'>
@@ -63,7 +81,7 @@ const Contact = () => {
               </div>
               <div className='labl'>
                
-                <form onSubmit={handleSubmit}>
+                <form >
                 <h3> <strong>Drop Us A Qurey</strong></h3>
                   <label>
                     Name:
@@ -82,10 +100,10 @@ const Contact = () => {
                   <br />
                   <label>
                     Message:
-                    <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+                    <textarea type="message" value={message} onChange={(e) => setMessage(e.target.value)} />
                   </label>
                   <br />
-                  <button type="submit">Submit</button>
+                  <button type="submit" variant="primary" onClick={sendContact}>Submit</button>
                 </form>
               </div>
             </div>

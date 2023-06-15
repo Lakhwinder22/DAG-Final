@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import Alert from 'react-bootstrap/Alert';
+
 
 function AppointmentForm() {
+  const [show, setShow] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -9,33 +12,51 @@ function AppointmentForm() {
   const [candidatePhotoId, setCandidatePhotoId] = useState('');
   const [guardianPhotoId, setGuardianPhotoId] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Handle form submission here, such as sending the data to a server or performing other actions
+    const res = await fetch("/appointment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name, email, phone, date, time
+      })
+    });
 
-    // Reset form fields after submission
-    setName('');
-    setEmail('');
-    setPhone('');
-    setDate('');
-    setTime('');
-    setCandidatePhotoId('');
-    setGuardianPhotoId('');
+    const data = await res.json();
+    console.log(data);
+
+    if (data.status === 401 || !data) {
+      console.log("error")
+    } else {
+      setShow(true);
+      // setEmail("")
+      console.log("Email sent")
+    }
+    
   };
 
   const handleCandidatePhotoIdChange = (e) => {
     const file = e.target.files[0];
     setCandidatePhotoId(file);
+    
   };
 
   const handleGuardianPhotoIdChange = (e) => {
     const file = e.target.files[0];
     setGuardianPhotoId(file);
+     
   };
 
   return (
-    <>
+    <> 
+    {
+        show ? <Alert variant="primary" onClose={() => setShow(false)} dismissible>
+          Your Application Succesfully Send
+        </Alert> : ""
+      }
       <div className='pagesection' id='Reach'>
         <div className='container' >
           <div className='row'>
@@ -44,7 +65,7 @@ function AppointmentForm() {
                   <h2><strong> BOOK AN APPOINTMENT</strong></h2>
                 </div>
                 <br></br>
-                <form onSubmit={handleSubmit}>
+                <form >
                   <label>
                     Name:
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
@@ -72,7 +93,7 @@ function AppointmentForm() {
 
                   <label>
                     Candidate Photo ID:
-                    <input type="file" onChange={handleCandidatePhotoIdChange} />
+                    <input type="file"  onChange={handleCandidatePhotoIdChange} />
                     {candidatePhotoId && <p>Selected file: {candidatePhotoId.name}</p>}
                   </label>
 
@@ -82,7 +103,7 @@ function AppointmentForm() {
                     {guardianPhotoId && <p>Selected file: {guardianPhotoId.name}</p>}
                   </label>
 
-                  <button type="submit">Submit</button>
+                  <button type="submit" onClick={handleSubmit} >Submit</button>
                 </form>
             </div>
           </div>
